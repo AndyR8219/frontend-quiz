@@ -1,1 +1,2 @@
-export { AnswerCard } from './answer-card/answer-card';
+export * from './question/components/answer/answer';
+export * from './question/question';

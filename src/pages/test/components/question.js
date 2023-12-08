@@ -10,6 +10,8 @@ export const Question = ({
 	testing,
 	setTesting,
 }) => {
+	console.log('Test');
+
 	const questionTitle = data.questions[questionNumber].title;
 	const questionAnswers = data.questions[questionNumber].answers;
 

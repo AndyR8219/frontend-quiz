@@ -1,1 +1,2 @@
-export { getTest } from './get-test';
+export * from './get-test';
+export * from './update-test';

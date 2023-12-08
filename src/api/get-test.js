@@ -1,13 +1,10 @@
-export const getTest = async () =>
-	fetch('/api/')
-		.then((res) => {
-			if (res.ok) {
-				return res;
-			}
-			const error =
-				res.status === 404
-					? 'Такая страница не существует'
-					: 'Что-то пошло не так.';
-			return Promise.reject(error);
-		})
-		.then((res) => res.json());
+import axios from '../axios';
+
+export const getTest = async () => {
+	try {
+		const { data } = await axios.get('/tests');
+		return data;
+	} catch (err) {
+		console.log('Ошибка получения тестов', err);
+	}
+};
